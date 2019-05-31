@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-// import Characters from './components/Characters';
+import Starcharacters from "./components/Starcharacters";
+// import Header from './components/Header';
 
 
 export default class App extends Component {
@@ -30,16 +31,15 @@ export default class App extends Component {
         throw new Error(err);
       });
   };
-
-  render() {
-    return this.state.starwarsChars.map((char) => (
-      <div className='mainDiv'>
-        <p>Name: {char.name}</p>
-        <p>Height: {char.height}</p>
-        <p>Gender: {char.gender}</p>
-      </div>
-    ));
   
+  render() {
+    return(
+      <div className='mainDiv'>
+  
+        <Starcharacters  charData={this.state.starwarsChars} />
+      </div>
+    
+    )
   }
 }
 

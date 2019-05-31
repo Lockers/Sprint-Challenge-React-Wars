@@ -1,16 +1,22 @@
 import React from 'react'
 
-function Characters() {
-    debugger;
+const Character = props => {
     return (
-        this.props.starWarsChars.map((chars) => (
-            <div className='mainDiv'>
-                <p>Name: {chars.name}</p>
-                <p>Height: {chars.height}</p>
-                <p>Gender: {chars.gender}</p>
+        <div className="character">
+            <h1>{props.charData.name}</h1>
+            <div className="character-attributes">
+                <ul>
+                    <li>Born : {props.charData.birth_year}</li>
+                    <li>Hair Color : {props.charData.hair_color}</li>
+                    <li>Eye Color : {props.charData.eye_color}</li>
+                    <li>Skin Color : {props.charData.skin_color}</li>
+                    <li>Height : {props.charData.height}</li>
+                    <li>Mass : {props.charData.mass}</li>
+                    <li>Gender : {props.charData.gender}</li>
+                </ul>
             </div>
-    ))
- )
-}
+        </div>
+    );
+};
 
-export default Characters
+export default Character;
