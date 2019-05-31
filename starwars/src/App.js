@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
+import Starcharacters from "./components/Starcharacters";
+// import Header from './components/Header';
 
-class App extends Component {
-  constructor() {
-    super();
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
     };
   }
-
+  
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people/');
   }
@@ -28,14 +31,15 @@ class App extends Component {
         throw new Error(err);
       });
   };
-
+  
   render() {
-    return (
-      <div className="App">
-        <h1 className="Header">React Wars</h1>
+    return(
+      <div className='mainDiv'>
+  
+        <Starcharacters  charData={this.state.starwarsChars} />
       </div>
-    );
+    
+    )
   }
 }
 
-export default App;
