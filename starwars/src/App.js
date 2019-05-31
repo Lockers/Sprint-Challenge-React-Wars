@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
+// import Characters from './components/Characters';
 
-class App extends Component {
-  constructor() {
-    super();
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
     };
   }
-
+  
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people/');
   }
@@ -30,12 +32,14 @@ class App extends Component {
   };
 
   render() {
-    return (
-      <div className="App">
-        <h1 className="Header">React Wars</h1>
+    return this.state.starwarsChars.map((char) => (
+      <div className='mainDiv'>
+        <p>Name: {char.name}</p>
+        <p>Height: {char.height}</p>
+        <p>Gender: {char.gender}</p>
       </div>
-    );
+    ));
+  
   }
 }
 
-export default App;
