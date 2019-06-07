@@ -5,10 +5,10 @@ const Char = props => {
     
     return (
         <div className='charCard' >
-            <h1>{props.char.name}</h1>
-            <p>Gender: {props.char.Gender}</p>
-            <p>Height: {props.char.Height}</p>
-            <p>Mass: {props.char.mass}</p>
+            <h1><strong>Name: </strong> {props.char.name}</h1>
+            <p><strong>Gender: </strong> {props.char.gender}</p>
+            <p><strong>Height: </strong> {props.char.height}</p>
+            <p><strong>Mass: </strong> {props.char.mass}</p>
             <p><strong>Birth Year: </strong> {props.char.birth_year}</p>
             <p><strong>Eye Color: </strong>{props.char.eye_color}</p>
             

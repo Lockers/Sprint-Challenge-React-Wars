@@ -34,11 +34,15 @@ class App extends Component {
 
   nextPage = (event) => {
     event.preventDefault()
-    this.getCharacters(this.state.fullData.next)
+    if (this.state.fullData.next !== null) {
+      this.getCharacters(this.state.fullData.next)
+    }
   }
   previousPage = (event) => {
     event.preventDefault()
-    this.getCharacters(this.state.fullData.previous)
+    if (this.state.fullData.previous !== null) {
+      this.getCharacters(this.state.fullData.previous)
+    }
   }
 
   render() {
