@@ -1,9 +1,0 @@
-.charCard{
-    background-image: linear-gradient(red, yellow);
-    max-width: 500px;
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-    padding: 5px;
-    flex-direction: column;
-}
